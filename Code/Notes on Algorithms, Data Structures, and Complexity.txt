@@ -1,0 +1,150 @@
+Data Structures Practice List
+
+    Linked Lists
+    Trees, Graphs
+    Stacks, Queues
+    Heaps
+    Vectors, Arrays
+    Hash Tables
+
+Algorithm Practice List
+
+    Breadth-First Search
+    Depth-First Search
+    Binary Search
+    Merge Sort
+    Quicksort
+
+Concepts
+
+    Bit Manipulation
+    Memory (Stack vs. Heap)
+    Recursion
+    Dynamic Programming
+    Big O Time & Space
+
+
+
+Power of 2 table:
+
+    2^7     128    
+    2^8     256
+    2^9     512
+    2^10    1024        1 thousand      1 KB
+    2^16    65,536
+    2^20                1 million       1 MB
+    2^30                1 billion       1 GB
+    2^32                                4 GB
+    2^40                1 trillion      1 TB
+
+
+Walking Thru a problem:
+
+    1) Listen – Pay very close attention to any information in the problem decription
+        You probably need it all for an optimal algorithm
+
+    2) Prototype – Make a prototype and debug it
+        Is it missing any special cases? 
+        Is it big enough?
+
+    3) Brute Force – Get a brute force solution as soon as possible
+        Write something naive just to have something
+        Then optimize afterwards
+
+    4) Optimize – Bottlenecks, Unneccessary work, Duplicated work
+        Look for unused information
+        Solve manually then reverse engineer
+        Solve "incorrectly" then learn from mistakes
+        Time vs. Space
+
+    5) Walk Through
+        Check solution in totality for errors / missing steps
+
+    6) Implement
+        Now that the design is done, write beautiful code
+
+    7) Tests
+        Conceptual test – walk thru like code review
+        Check for unusual or unstandard code
+        Hot spots, like arithmetic and null nodes
+        Small test cases
+        Special cases and edge cases
+
+
+BCR – Best Concievable Runtime
+
+    Figure out what the best possible runtime of a solution might be
+    This would give you some good hints when designing a future solution
+
+
+
+
+Hash Tables
+
+    A hash table could be implemented as an array of linked lists and a hash function
+
+        1) First, compute key's hash code. 
+            Because of the pidgeon hole problem, there is the possibility that multiple
+            keys might evaluate to the same hash. How do you deal with this?
+
+        2) Then, map the hash code to an index in the array. 
+            This could be done with something like hash(key) % array_len. Again, because
+            of the pidgeon hole problem, two different hashes may overlap on the same index.
+
+        3) At this index, there is a linked list of keys and values. 
+            Store the key and value in the linked list. The storage is instantiated as a linked
+            list to deal with the collisions created in step 1 and 2. 
+
+    O(N) time worst case (if all key-values are stored in the same index)
+    O(1) time average case (if key-values are widely dispersed)
+
+ArrayList
+
+    Arrays that size themselves dynamically
+
+    Usually implemented by doubling space when needed
+        This is O(N), but happens so rarely that the amortized
+        runtime is O(1)
+
+        This is because the sum (N/2 + N/4 + N/8 + ... 1 < N)
+
+
+Practice Questions:
+
+    1.1)
+
+        Implement an algorithm to determine if a string has all unique characters
+
+            Iterate thru string
+                Put each char into hash table
+                If collision --> return False
+
+            If loop finishes --> return True
+
+        If I can't use other data structures:
+
+            Iterate thru string with i
+                Iterate thru string from i with j
+                    if char.at(i) == char.at(j) --> return false
+
+            return true
+
+    1.2)
+
+        Given two strings, write a method to decide if one is a permutation of another
+
+            Iterate thru both strings
+                Put each char into BST of tuples
+                    (char, num)
+
+            Traverse both BST's
+                If any tuple doesn't equal --> return false
+
+            return true
+
+    1.3)
+
+        Write a method to replace all spaces in a string with '%20'. 
+
+    
+        

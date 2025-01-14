@@ -1,0 +1,103 @@
+<html>
+	<head>
+		<title> Palace | Mathematics</title>
+		<link rel="stylesheet" type="text/css" href="../../style_page.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<h1> <a href="..\..\index.html"> Palace</a> /<a href="..\Gallery.html">Mathematics</a> /Discussion</h1>
+		</header>
+		<aside>
+			<ul class="nav-area">
+				<li><h3>Topics:</h3></li>
+				<li class="list-effect-1"><a href="../../Art/Gallery.html">Art</a></li>
+				<li class="list-effect-1"><a href="../../Computation/Gallery.html">Computation</a></li>
+				<li class="list-effect-1"><a href="../../Language/Gallery.html">Language</a></li>
+				<li class="list-effect-1"><a href="../../Mathematics/Gallery.html">Mathematics</a></li>
+				<li class="list-effect-1"><a href="../../Music/Gallery.html">Music</a></li>
+				<li class="list-effect-1"><a href="../../Other/Gallery.html">Other</a></li>
+			</ul>
+			<ul class="nav-area-notes">
+				<li><h3>Notes:</h3></li>
+				<li class="list-effect-1"><a href="Category Theory.html">Category Theory</a></li>
+				<li class="list-effect-1"><a href="Homotopy Theory.html">Homotopy Theory</a></li>
+				<li class="list-effect-1"><a href="Topology.html">Topology</a></li>
+				<li class="list-effect-1"><a href="Pointed Space.html">Pointed Space</a></li>
+				<li class="list-effect-1"><a href="Idempotence.html">Idempotence</a></li>
+				<li class="list-effect-1"><a href="Homomorphism.html">Homomorphism</a></li>
+			</ul>
+		</aside>
+		
+		
+		<content>
+
+			<p class="chris"> 
+				I've been watching category theory lectures on YouTube lately, by two people: <a href="https://www.youtube.com/user/richardsouthwell">Richard Southwell</a>, and <a href="https://www.youtube.com/user/DrBartosz/videos">Bartosz Milewski</a>. The following are notes I've synthesized from these lectures.
+			</p>
+
+			<p class="chris"> In <a href="https://www.youtube.com/watch?v=JH_Ou17_zyU">Milewski's video</a>, he first talks about the nature of mathematics and programming, as it is taught to young people. He claims that the current state of mathematics education regards young people too much as computers, and as such, teaches them to carry out instructions without mistake, as we expect computers to do. This is a poor way to teach humans, who are far better at thinking globally, abstractly, and goal-orientedly than locally, technically, and routinely. He continues to relate this dichotomy to that of functional vs. imperative programming languages, saying that the former is more condusive to human thinking, and the latter mechanical thinking. Category theory then is the functional programming approach to mathematics, one might say. It allows people to exchange abstract ideas in the way least burdened by technicalities and specifics. </p>
+
+			<p class="chris"> As for what category theory is... we can certainly start with how a category is defined. Like functional programming, like lambda calculus, this branch of mathematics is very simply defined, the complexity arising out of the creative implementations and emergent properties of the simple definition. This makes starting over talking about category theory funny, because I will repeat myself not feeling like I know much more about these simple rules, because I already grapsed the rules themsevles the first time I'd heard them. Oh, it is a graph, with nodes and edges. But now my understanding has been upbuilt from this definition, and so in beginning again, I will build deeper and taller out of the wood and nails that have been the same as in every other beginning. </p>
+
+			<p class="chris"> A category is some collection of objects (objects) and arrows between them (morphisms), given that this collection respects two properties: a) that arrows are associative, in that a arrow from a to b and a arrow from b to c can combine to a arrow from a to c, and b) that each object has an identity arrow, that takes itself to itself. Thus, the category is defined, and category theory defined thereby as its study. The category can represent anything, from objects as numbers and arrows as functions between them, to objects as words and arrows as concatenation into sentences. </p>
+				
+			<p class="chris">Milewski then goes on to define the category of types that exist, when considering the theory of programming, which I will attempt to relate here.</p>
+
+			<p class="chris">To set the stage, the categeory we are considering is one where objects are data types, and arrows are functions that would take as input some type, and output some other type. More specifically, an outgoing arrow is called an Elimination, due to the function eliminating the type that it came from, transforming to a different type, and an incoming arrow is called a Constructor, due to the function constructing the type from another. </p>
+				
+			<p class="chris">Now, we can define the empty type, 'Void'. This type corresponds to falsehood in logic, or the empty set in set theory. Void type in category theory is a object with arrows to every other type imagineable in the category– it is the Initial Object of the category. It can eliminate to any other type. </p>
+
+			<p class="chris">Moving on, we can define the 'Unit' type. In set theory, this is a singleton set. This is the opposite of the Initial Object, which is called the Terminal Object. As an inversion of the former, the Terminal Object has a unique arrow from any object to it. As such, the Unit type can be constructed from any other type. </p>
+
+			<p class="chris">Now that we have some types, we can begin to explore the operations we can perform over them, given that they are objects in category theory. The first of these we'll consider is the Product. As defined, the product of two objects A and B is some object C that has arrows to both A and B. Given that there could exist many of these objects in any category, the 'Candidate' language is employed. The product operation, as spoken about by both Milewski and Southwell, is always spoken about as having 'Candidates', which is such funnily consistent language. How do we know which candidate is the best, and ultimately is the product? Well, the best product is the one which has some incoming arrow h that takes any other product candidate to it. That way, the actual product, the best product, is the most direct product of the two. Like how you could ask what is the product of 3 and 4, and while there are infinite numbers that are products of 3 and 4 (and whatever else), only one number is the most direct product of 3 and 4, which is 12. Any other candidate product could be reduced to 12 multiplied by whatever else. </p>
+
+			<p class="chris">As is pattern in category theory, one thing we can do is flip the polarity of all arrows in a construction, and get another construction for free, as we did between Initial and Terminal Objects. So, by flipping all arrows in our definition of a product, we get the notion of co-product, or Sum. Now, we have a construction where the co-product candidate is one to which two objects A and B point, this object being thought of as a disjoint union of A and B– either A or B, not both. The best co-product would then be the one which would have an arrow h to any other candidate, which is to say that the best candidate is the one that is closest constructed from A and B. </p>
+
+			<p class="chris">From these two operations, we have tools to discuss Monoidal Categories. As Milewski says, a monoidal categeory is one in which every two objects have a product and a coproduct. Furthermore, the product and coproduct operations need to have associativity and an identity. Associativity is respected by both given the lack of respect for order in their definitions, and the identities are given by the properties that the product between some type and the unit type is itself, and that the coproduct between some type and the void type is itself. </p> 
+
+			<p class="chris">And badda-bing badda-boom, we can now construct any data type from these rules. Boolean is the coproduct of two units, thereby giving a bool the choice of being either the first unit or the second, where one is arbitrarily given as true and the other as false. Natural numbers can be represented as strings of coproducts, as many as is the magnitude of the number to be represented. </p>
+
+			<hr>
+
+			<p class="chris"> I'm going to paste all notes from our email chain here, to facilitate study. </p>
+
+
+			
+			
+			<p class="jake"> There is a definition of categories that doesn't use objects at all, only arrows. A category is a collection of arrows with two idempotent closure operators on it sending arrows to the identity arrows at their source and target, and composition is only defined where the images of these operators overlap (fg only exists if domain(f)=codomain(g), and then domain(fg)=domain(g) and codomain(fg)=codomain(f)). You can always recover objects from the arrow-only presentation, but technically they are just a convenient shorthand for static processes, where a "process" is just an arrow. </p>
+
+			<p class="chris"> This makes sense to me, that objects can be made redundant, because they are simply places for arrows to go. And especially since (as I understand it) to be considered a category, each object needs an identity arrow, such that an object could be considered just this arrow, thereby making the object reduntant, yeah. And then composition would look, as you say, to be just defined where arrows align tip-to-tail. </p>
+
+			<hr>
+
+			<p class="chris"> 12/12/2019</p>
+			
+			<p> The content on nLab is still just a little inapproachable for me, so I'm going to start by digesting the <a href="https://en.wikipedia.org/wiki/Category_theory">Wikipedia Article</a> on Category Theory. The following are my notes: </p>
+
+			<p>From Wikipedia: "Category Theory formalizes mathematical structure and its concepts in terms of a labeled directed graph, called a category, whose nodes are called objects, and whose labelled directed edges are called arrows (or morphisms)"</p>
+
+			<p> Okay, so here's the in for me– I fucking love graphs, I work with directed graph all the time. My language project (dubbed Ideanet) is a directed graph data structure, I am absolutely starting to grasp how applicable this arena of mathematics is going to be regarding that project... Awesome awesome awesome. </p>
+
+			<p> So then, when you say "'Spaces' are things with objects, arrows between objects, homotopies between arrows, and higher homotopies-between-homotopies", this is indicative of this graph data structure, where category -> space, object -> object, morphism -> arrow, and then the equivalent abstraction that would take morphisms to morphisms, and then the next abstraction that would take that abstraction to another of that abstraction... so on... This recursive environment is absolutely perfect for natural language processing, absolutely. </p>
+
+			<p>From Wikipedia: "A basic example of a category is the category of sets, where the objects are sets and the arrows are functions from one set to another. However, the objects of a category need not be sets, and the arrows need not be functions. Any way of formalising a mathematical concept such that it meets the basic conditions on the behaviour of objects and arrows is a valid category—and all the results of category theory apply to it."</p>
+
+			<p> So category really is a broad definition, isn't it? It seems like anything can be a category, so long as it can be structured as such. Fascinating. Because it is about the structure, the "structure-preserving transformation connecting two objects." </p>
+
+			<p>"A Functor associates to every object of one category an object of another category, and to every morphism in the first category a morphism from the second" [...] "studying categories and functors is not just studying a class of mathematical structures and the morphisms between them but rather the relationships between various classes of mathematical structures."</p> 
+
+			<p> So this is just that third layer of abstraction above, the third derivative if you will (or second? indexing at 1 or 0? lol). Cool. Is a functor equivalent to a homotopy when working in Homotopy Type Theory? </p>
+
+			<p>Okay, so to "use" category theory... I would organize some system into a structure with nodes and arrows between them. If I were to take a state machine as an example, is that already then a category? States and transition functions between them? That's cool, objects and morphisms. Then, let's say I had multiple different state machines, S_1 and S_2 – a functor would take every state from S_1 to S_2, and every transition function from S_1 to S_2. Does this have to be surjective? What if the machines had different numbers of states or transitions? I've been stewing on creating a cellular automata implementation that would let me switch how each individual cell's state machine operates, and I was imagining how I would program rules to do so. I imagine this would be like making a functor that takes each state machine to another state machine.</p>
+			
+			<p>Moving on: "Abstracting yet again" [...] "This leads to the clarifying concept of natural transformation, a way to "map" one functor to another." [...] "An arrow between two functors is a natural transformation when it is subject to certain naturality or commutativity conditions."</p>
+
+			<p> Another level above... Studying the relationships BETWEEN THE RELATIONSHIPS BETWEEN VARIOUS CLASSES OF MATHEMATICAL STRUCTURES. Very cool. So then, if I had functors that take state machines in each cell to different state machines, and if I wanted each functor to also vary over time, to also be taken from functor to functor given some parameter... So many layers! I might be abstracting in the wrong dimension with this example, but it is cool nevertheless lol</p>
+
+			<p>I can tell it is going to take me a long time to fully digest this material. I am having a fun time diving in though. My brain is feeling very full of new things. I'm finding myself surprised with how much I, like, agree with this material, and the ideological themes underpinning it. Like, that of recursion of abstraction, that there is always higher and higher levels of it, and that the exploration and divination of those levels is worthwhile. I love this, I feel like this formalizes so much natural intuition for me, this is fantastic. Thank you Jake for directing me to these resources. </p>
+
+
+		</content>
+	</body>
+</html>

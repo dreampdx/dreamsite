@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title> Palace | Computation</title>
+		<link rel="stylesheet" type="text/css" href="../../style_page.css">
+	</head>
+	<body>
+		<header>
+			<h1> <a href="..\..\index.html"> Palace</a> /<a href="..\Gallery.html">Computation</a> /Discussion</h1>
+		</header>
+		
+		<aside>
+            <ul class="nav-area">
+                <li><h3>Topics:</h3></li>
+                <li class="list-effect-1"><a href="../../Art/Gallery.html">Art</a></li>
+                <li class="list-effect-1"><a href="../../Computation/Gallery.html">Computation</a></li>
+                <li class="list-effect-1"><a href="../../Language/Gallery.html">Language</a></li>
+                <li class="list-effect-1"><a href="../../Mathematics/Gallery.html">Mathematics</a></li>
+                <li class="list-effect-1"><a href="../../Music/Gallery.html">Music</a></li>
+                <li class="list-effect-1"><a href="../../Other/Gallery.html">Other</a></li>
+            </ul>
+			<ul class="nav-area-notes">
+				<li><h3>Notes:</h3></li>
+				<li class="list-effect-1"><a href="Cellular Automata.html">Cellular Automata</a></li>
+				<li class="list-effect-1"><a href="Chu Spaces.html">Chu Spaces</a></li>
+				<li class="list-effect-1"><a href="Lambda Calculus.html">Lambda Calculus</a></li>
+			</ul>
+        </aside>
+		
+		<content>
+
+			<p class="chris"> 
+				
+			</p>
+
+			<hr>
+			
+			<p class="chris"> as per email on Cellular Automata, 12/14/29</p>
+
+			<p class="chris"> I’ve been thinking about cellular automata. I want to make a new implementation of them where each cell is represented as it’s own state machine, such that each cell could be parameterized individually. This is as opposed to what I’m doing now, which is essentially having a single state machine that runs for each cell in the 2D array.
+
+			This would allow for so many different behaviors, especially if I were to allow the circumstances of the visual layer to affect the parameters of each cell’s state machines, or perhaps allowed the state machines’ parameters themselves to be generated/altered using a cellular automaton– I would be tremendously interested to see what that would look like, what sort of behaviors that would exhibit!
+			</p>
+
+			<p class="jake"> 
+				I've had thoughts about automata whose states are no longer elements in a set, but instead objects in a category. A particularly interesting recursive case is when the states of the automaton are deterministic automata with "mere sets" of states. Obviously the situation gets wayyy more complex, but I think the categorical, comonadic approach to automata provides a means of restricting the language and how the concept is investigated. I will try to formalize my ideas today and get back to you on it! Are you thinking about writing a program to implement these higher automata? Deterministic automata of certain flavors and restrictions fit into 1-categories, where the arrows are simulations (functions from global configurations of one automaton to configurations of another that commute with the deterministic evolution map). Categories of nondeterministic automata are distinguished by the different inherent properties of categories of nondeterministic automata. Simulations of nondeterministic automata are functions from configurations to configurations, but the property of commuting with the evolution maps must now be promoted to some sort of structure that maps the distribution of possible transitions of each system configuration to the distribution of transitions of the configuration it gets mapped to by the function-of-configurations part of the data that constitutes a simulation. Whenever we see this movement from properties to structures, it indicates that we have gone up a categorical dimension (see this). This suggests that nondeterministic automata are some sort of 1-categorical analog of 0-categorical deterministic automata. I think that replacing sets of states with categories of states, or more generally replacing some 1-category of possible sets of states (such as Set) with some 2-category of all the permitted "objects of states". Organizing things like this will help in identifying the optimal means of actually programming these data structures.
+
+			</p>
+
+		</content>
+	</body>
+</html>

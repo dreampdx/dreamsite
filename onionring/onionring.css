@@ -1,0 +1,49 @@
+/* onionring.js is made up of four files - onionring-widget.js, onionring-index.js, onionring-variables.js and onionring.css (this one!)
+// it's licensed under the cooperative non-violent license (CNPL) v4+ (https://thufie.lain.haus/NPL.html)
+// it was originally made by joey + mord of allium (蒜) house, last updated 2020-10-24 */
+
+/* === ONIONRING.CSS === */
+/* this file affects the style of the widget. remember to replace all instances of #webringid with whatever value you have for ringID in the onionring-widget.js file. make sure it still has the # at the front, though! probably easiest to use find+replace to do it */
+
+#dream-ring {
+  margin: 0 auto;
+  padding-left: 5%; /* creates some space around the widget */
+  float: left;
+}
+
+#dream-ring table {
+  background-color: #000000; /* makes the background pure white */
+  color: white;
+  margin: 0 auto; /* centers the widget */
+  border-radius: 5px;
+  text-align: center;
+}
+
+#dream-ring table tr td {
+  padding: 5px; /* creates some space between the links and text inside the widget */
+}
+
+#dream-ring .webring-prev {
+  text-align:right;
+}
+
+#dream-ring .webring-info {
+   text-align:center;
+}
+
+#dream-ring .webring-next {
+  text-align:left;
+}
+
+#dream-ring .webring-links {
+  font-size:small;
+  text-align:center;
+}
+
+#dream-ring a{
+  color:white;
+} 
+
+#dream-ring a:hover{
+  color:white;
+}

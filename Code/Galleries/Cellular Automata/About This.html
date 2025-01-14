@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<title> Palace | Computation </title>
+		<link rel="stylesheet" type="text/css" href="grid_styles.css">
+		<link rel="stylesheet" type="text/css" href="../../../style_page.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<h1> <a href="..\..\..\index.html"> Palace</a> /<a href="..\..\Gallery.html">Computation</a> /Cellular Automata</h1>
+		</header>
+		
+		<aside>
+            <ul class="nav-area">
+                <li><h3>Topics:</h3></li>
+                <li class="list-effect-1"><a href="Laboratory.html">To Laboratory</a></li>
+				<li class="list-effect-1"><a href="../../Gallery.html">Back to Gallery</a></li>
+			</ul>
+		</aside>
+		
+		<content>
+			
+			<p>This is a 2D cellular automata processor with the following parameters:</p>
+			<ul>
+				<li>LU: Live Underpopulation</li> 
+				<li>LO: Live Overpopulation</li>
+				<li>DU: Dead Underpopulation</li>
+				<li>DO: Dead Overpopulation</li>
+				<li>AE: Area of Effect</li>
+				<li>NS: Number of Steps</li>
+			</ul>
+
+			<p>Such that the following state transitions hold</p>
+
+			<ul>
+				<li>T(L: L, D) = L if LU <= L <= LO, else T(L: L, D) = D </li> 
+				<li>T(D: L, D) = L if DU <= L <= DO, else T(L: L, D) = D </li> 
+			</ul>
+
+			<p>Area of Effect increases radius of Moore neighborhood, scaling the other parameters as follows:</p>
+
+			<p>{LU, LO, DU, DO} = Floor({LU, LO, DU, DO} * ((3 + (AE - 1) * 2) ^ 2 - 1) / 8) </p>
+
+			<p> Thus, when AE is set to 1:</p>
+
+			<p> {LU, LO, DU, DO} = Floor({LU, LO, DU, DO} * 8 / 8)</p>
+			<p> {LU, LO, DU, DO} = {LU, LO, DU, DO} </p>
+			
+			<p> And, when AE is set to 2: </p>
+
+			<p> {LU, LO, DU, DO} = 4 * {LU, LO, DU, DO} </p>
+
+			<p> So on.</p>
+
+			<p>I've spent some time drawing up classifications for the different emergent lifeforms from these parameters. These classifications are:</p> 
+
+			<ul>
+				<li>Blob – Lifeforms that grow continuously outwards. 
+				</li>
+				<li>Viable – Lifeforms that are unpredictable in whether they will grow or shrink</li>
+				<li>Non-Viable – Lifeforms that shrink continuously</li>
+				<li>Super-Viable – Lifeforms that fill all spaces in grid</li>
+			</ul>
+			
+			<p>I further parameterized Blobs as follows:
+			</p>
+			<ul>
+				<li>Border Quality:
+					<ul>
+						<li>Solid – Border of lifeform advances rigidly and as a "unified front"</li>
+						<li>Liquid – Border of lifeform advances in "waves" or "spills"</li>
+						<li>Gaseous – Border of lifeform advances in "pulses" or "particles"</li>
+
+					</ul> 
+				</li>
+				<li>
+					Interior Quality:
+					<ul>
+						<li>Static – Lifeform finds arrangement in which cells do not transition</li>
+						<li>Pulsing – Lifeform finds arrangement in which some cells do not transition</li>
+						<li>Dynamic – Lifeform finds arrangement in which no cells do not transition</li>
+					</ul>
+				</li>		
+			</ul>
+
+			<p>I further parameterized viables as follows:</p>
+			<ul>
+				<li>Border Quality:
+					<ul>
+						<li>Closed – Lifeform tends towards closed shapes delineating life from empty space</li>
+						<li>Open – Lifeform tends towrads no delineation between life and empty space</li>
+					</ul> 
+				</li>
+				<li>
+					Interior Quality:
+					<ul>
+						<li>Static – Lifeform finds arrangement in which cells do not transition</li>
+						<li>Pulsing – Lifeform finds arrangement in which some cells do not transition</li>
+						<li>Dynamic – Lifeform finds arrangement in which no cells do not transition</li>
+					</ul>
+				</li>		
+			</ul>
+
+			<p> So, some classifications are </p>
+			<ul>
+				<li>{0, 0, 1, 1, 1} = BGD </li>
+				<li>{2, 5, 1, 1, 1} = BLP </li>
+				<li>{2, 3, 3, 3, 1} = VOD </li>
+				<li>{0, 8, 1, 8, 1} = SV </li>
+			</ul>
+		</content>
+	</body>
+</html>

@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<title> Palace | Mathematics</title>
+		<link rel="stylesheet" type="text/css" href="../../style_page.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<h1> <a href="..\..\index.html"> Palace</a> /<a href="..\Gallery.html">Mathematics</a> /Discussion</h1>
+		</header>
+		
+		<aside>
+            <ul class="nav-area">
+                <li><h3>Topics:</h3></li>
+                <li class="list-effect-1"><a href="../../Art/Gallery.html">Art</a></li>
+                <li class="list-effect-1"><a href="../../Computation/Gallery.html">Computation</a></li>
+                <li class="list-effect-1"><a href="../../Language/Gallery.html">Language</a></li>
+                <li class="list-effect-1"><a href="../../Mathematics/Gallery.html">Mathematics</a></li>
+                <li class="list-effect-1"><a href="../../Music/Gallery.html">Music</a></li>
+                <li class="list-effect-1"><a href="../../Other/Gallery.html">Other</a></li>
+			</ul>
+			<ul class="nav-area-notes">
+				<li class="list-effect-1"><a href="Category Theory.html">Category Theory</a></li>
+				<li class="list-effect-1"><a href="Homotopy Theory.html">Homotopy Theory</a></li>
+				<li class="list-effect-1"><a href="Topology.html">Topology</a></li>
+				<li class="list-effect-1"><a href="Pointed Space.html">Pointed Space</a></li>
+				<li class="list-effect-1"><a href="Idempotence.html">Idempotence</a></li>
+				<li class="list-effect-1"><a href="Homomorphism.html">Homomorphism</a></li>
+			</ul>
+		</aside>
+		
+		<content>
+
+			<p class="chris"> Hey Jake! Pleasure to see you here! A few things: I've added the string 'class=jake' to all the paragraph tags of your entry, so that your text is differentiable from mine, and I've moved your entry up to the top. I think I like best the chronology to be old-at-the-bottom and new-at-the-top– what do you think?</p>
+
+			<p class="chris"> I'm going to go thru now and hyperlink stuff in your post to pages I'm making given the new content I'm remembering/learning, and I'll be adding questions/comments throughout. I'm also going to be adding material from our email chaines. Let's see if we can't get a good dialectic going!</p> 
+
+			<p class="chris"> I think I'm also going to be dating these entries to, if you wouldn't mind following suit, just for our future reference :) </p>
+
+			<p class="chris"> 12/16/19</p>
+
+			<hr>
+
+			<p class="jake"> 12/16/19</p> 
+			
+			<p class="jake"> Hey Chris! This is my first post on the Palace! I've finally found an HTML editor. It will work until I establish a good workflow here. </p>
+			
+			<p class="jake"> Homotopy theory essentially began when Henri Poincare defined the <a href="https://en.wikipedia.org/wiki/Fundamental_group"> fundamental group </a> of a <a href="Pointed Space.html">pointed topological space</a>. Historically, this also marks one of the first functors to be described. Not only does a pointed space induce a group of loops (up to homotopy; this is crucial to get a group), but every basepoint-preserving continuous function induces a <a href="Homomorphism.html"> homomorphism </a> of fundamental groups.</p>
+			
+			<p class="chris">
+				Okay, so, as per wikipedia article, a fundamental group is the group of the equivalence classes under homotopy of the loops contained in the space. 
+
+				Now I'm going off my dome, and not notes:
+
+				If we consider the example of the torus in 3-space, then there exist two equivalence classes of these loops, right? One class of loops going inside thru the hole of the donut (those loops that are a point rotation around some Y x X axis), and the other being the loops that traverse the whole ring of the donut (those loops that are a point rotation around Z axis). 
+				
+				So, I have an equivalence class in this example, but these groups must be "under homotopy" to be considered the "fundamental group." So what does this mean then, to be under homotopy?
+
+				And then you further say that every basepoint-preserving continuous function induces a homomorphism of fundamental groups. So, there can exist multiple fundamental groups, and when a basepoint-preserving continuous function is enacted over this space from one fundamental group A to another B, then there is born a homomorphism from A to B. This is like the torus turning to the coffee cup example in the wikipedia page, no? Some continuous function morphs one form to another, and this is homotopic if there exist homomorphs from the equivalence classes of loops in the first form to the equivalent classes of loops in the second? 
+
+				So i.e. holes stay holes? If you want a coffee cup with two handles, you'd have to start with a figure eight?
+			</p>
+
+			<p class="jake">
+			Continuous topological activity is transmuted into algebraic activity. Since every space has a continuous identity function	mapping each point to itself, we can think of spaces as "static topological activity", and think of continuous functions in general as "topological activity". In fact, this characterizes category theory more generally. There is a definition of categories that doesn't use objects at all, only arrows. A category is a collection of arrows with two <a href="Idempotence.html"> idempotent </a> closure operators on it sending arrows to the identity arrows at their source and target, and composition is only defined where the images of these operators overlap (fg only exists if domain(f)=codomain(g), and then domain(fg)=domain(g) and codomain(fg)=codomain(f)). You can always recover objects from the arrow-only presentation, but technically they are just a convenient shorthand for static processes, where a "process" is just an arrow.</p>
+			
+			<p class="jake"> Homotopy theory in a category can begin as soon as you are able to identify some object, called an interval and usually denoted I, as the "worldline" of the identity arrow on a point. A line interval exhbits a point in stasis for a nonzero extent of time. Your category has to have enough products, because now we want to be able to multiply spaces, objects, et cetera with the interval. Since an interval has to have two endpoints, we can use the inclusion maps of the endpoints to get inclusion maps of any space X into the "X-shaped cylinder" X x I. This cylinder becomes the standard shape of homotopies between arrows that go from X to any other space Y. Since the interval is the point-shaped cylinder, a homotopy between points is just a path. But a homotopy between two paths, even ones that have different start and end points in the same ambient space Y, is a square in Y whose left edge is given by one path and whose right edge is given by the other path. The square then depicts a possible means of sliding one path continuously into the other. </p class="jake">
+			
+			<p class="jake"> I'll come back with better pedagogical descriptions soon! I hope this branch edit works out fine! </p class="jake">
+
+			<hr>
+			
+			<p class="chris"> Alrighty, armed with my brief foray into the wikipedia page on Category Theory, I'm attempting study of the <a href="https://ncatlab.org/nlab/show/homotopy+theory"> Homotopy Theory </a> page on nlab.. </p>
+
+			<p class="chris">"In generality, homotopy theory is the study of mathematical contexts in which functions or rather (homo-)morphisms are equipped with a concept of homotopy between them, hence with a concept of equivalent <a href="https://ncatlab.org/nlab/show/deformation+theory">deformations</a> of morphisms, and then iteratively with homotopies of homotopies between those, and so forth."</p>
+
+			<p class="chris"> I followed the link presented by deformation, and connected so incredibly to the material in that page: "extending structures to extensions of their domains". This is an idea I'd had in <a href="../Language/Ideanet.html">Ideanet</a>, where, given the geometry of certain relationships between primatives, new relationships could be assumed. The example I'd always give was the classic "You have life and death as opposites, and then given that change and life are similar, and that stasis and death are similar, are change and stasis then opposites?", with many, many more of such scenarios I had come up with, but I had no formal system to describe why certain relationsips' geometries could be autocompleted as such, and others couldn't. I'm guessing though, given that this theory is all about finding similarities between structures, I'll bet there are categories out there where it is well defined why certain geometries can be autocompleted (deformed?), and if I could just relate my categories to that one, then perhaps I could formally define my autocompletion mechanic, and thus, as it says, extend the structure of Ideanet out into the extension of its domain! Fucking radical dude </p>
+
+			<p class="chris">So, moving on... I don't understand anything past this in the nLab page on Homotopy, that's cool. I'm switching now to reading off of <a href="https://ncatlab.org/nlab/show/Introduction+to+Topology+--+2">Introduction to Basic Homotopy Theory.</a> Notes for which I'll keep in <a href="Topology.html">Topology</a>. Jake, if you're reading this, man I'm having a good time digging into this. I'm currently wondering if watching this process is interesting, seeing someone attempt to dive into this material. I hope so! </p class="chris">
+			
+			
+		</content>
+	</body>
+</html>

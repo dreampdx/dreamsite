@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title> Palace | Mathematics</title>
+		<link rel="stylesheet" type="text/css" href="../../style_page.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<h1> <a href="..\..\index.html"> Palace</a> /<a href="..\Gallery.html">Mathematics</a> /Discussion</h1>
+		</header>
+		
+		<aside>
+            <ul class="nav-area">
+                <li><h3>Topics:</h3></li>
+                <li class="list-effect-1"><a href="../../Art/Gallery.html">Art</a></li>
+                <li class="list-effect-1"><a href="../../Computation/Gallery.html">Computation</a></li>
+                <li class="list-effect-1"><a href="../../Language/Gallery.html">Language</a></li>
+                <li class="list-effect-1"><a href="../../Mathematics/Gallery.html">Mathematics</a></li>
+                <li class="list-effect-1"><a href="../../Music/Gallery.html">Music</a></li>
+                <li class="list-effect-1"><a href="../../Other/Gallery.html">Other</a></li>
+			</ul>
+			<ul class="nav-area-notes">
+				<li class="list-effect-1"><a href="Category Theory.html">Category Theory</a></li>
+				<li class="list-effect-1"><a href="Homotopy Theory.html">Homotopy Theory</a></li>
+				<li class="list-effect-1"><a href="Topology.html">Topology</a></li>
+				<li class="list-effect-1"><a href="Pointed Space.html">Pointed Space</a></li>
+				<li class="list-effect-1"><a href="Idempotence.html">Idempotence</a></li>
+				<li class="list-effect-1"><a href="Homomorphism.html">Homomorphism</a></li>
+			</ul>
+		</aside>
+		
+		<content>
+
+			<p class="chris">
+				The following are notes taken from the wikipedia entry on <a href="https://en.wikipedia.org/wiki/Homomorphism">Homomorphisms</a>
+			</p>
+			
+			<p class="chris">
+				A Homomorphism is a structure-preserving map between two algebraic structures of the same type, meaning that some map between the two structures maintains some set of operations internal to the structures. 
+
+				The definition of this behavior is as such: a map f: A -> B preserves an operation u of arity k if f(u_A(a_1, ..., a_k)) = u_b(f(a_1), ..., f(a_k)), for all elements a_1, ..., a_k in A.
+			
+				To dissect this: there is an operation u in A. This operation, when applied to k elements in A, outputs some other element in A. This operation also exists in B. Some morphism f is considered structure-preserving (and thus is a homomorphism) if u is valid after f is applied to all the elements in u. 
+
+			</p>	
+
+			<p class="chris">
+				Rougly, I will begin to detail other special homomorphisms:
+				
+				Isomorphisms are essentially bijective homomorphisms, such that f o g = ID_B, and g o f = ID_A, with ID_A(x) = x in A, and ID_B(y) = y in B. Basically it means that a homomorphism is bidirectional, or reversible. 
+
+				Endomorphisms are homomorphims whose domain equals the codomain. The endomorphims if an object in a category form a monoid under composition. 
+
+				An Automorphism is a combination of the previous two– a homomorphism that is endo- and iso-morphic. The automorphisms of an object of a category form a group under composition, which is called the automorphism group of the structure.
+			</p>
+
+		</content>
+	</body>
+</html>
