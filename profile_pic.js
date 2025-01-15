@@ -9,7 +9,9 @@ var texts = [
   'arm trans women :3',
   'terfs get fucked',
   'i love you!!! its true awruff!!!!',
-  '<3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <# <3'
+  '<3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <# <3',
+  'ACAB! DIY Hormones! Disobey Authority!',
+  'hehehehehe yissssssssssss',
 ];
 
 var randomText = texts[Math.floor(Math.random() * texts.length)];
