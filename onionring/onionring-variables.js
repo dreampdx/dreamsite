@@ -7,7 +7,7 @@
 
 //the full URLs of all the sites in the ring
 var sites = [
-'file:///C:/Users/chris/Documents/dreamsite/index.html'
+'https://dreamtheory.lol/index.html'
 ];
 
 //the name of the ring
@@ -21,7 +21,7 @@ var ringID = 'dream-ring';
 //should the widget include a link to an index page?
 var useIndex = true;
 //the full URL of the index page. if you're not using one, you don't have to specify anything here
-var indexPage = 'file:///C:/Users/chris/Documents/dreamsite/index.html';
+var indexPage = 'https://dreamtheory.lol/index.html';
 
 //should the widget include a random button?
 var useRandom = true;
